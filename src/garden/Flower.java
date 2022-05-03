@@ -2,7 +2,7 @@ package garden;
 
 public class Flower extends Plant {
 
-    /* GETTERS & SETTER */
+    /* GETTERS & SETTERS */
     public String getType() {
         return "flower";
     }

@@ -8,7 +8,7 @@ abstract class Plant {
     protected int amountToCheck;
     protected double percentValue;
 
-    /* GETTERS & SETTER */
+    /* GETTERS & SETTERS */
     public abstract String getType();
 
     public String getStatus() {

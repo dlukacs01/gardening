@@ -7,7 +7,7 @@ public class Garden {
     /* FIELDS */
     private ArrayList<Plant> plants;
 
-    /* GETTERS & SETTER */
+    /* GETTERS & SETTERS */
     private int getWateringCount() {
         int i = 0;
         for (Plant plant : plants) {
