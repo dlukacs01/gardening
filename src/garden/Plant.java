@@ -3,9 +3,7 @@ package garden;
 abstract class Plant {
 
     protected String color;
-    protected String type;
     protected double waterAmount;
-
     protected boolean needsWater;
 
     protected abstract void needsWater();
