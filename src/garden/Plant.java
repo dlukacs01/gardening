@@ -11,10 +11,11 @@ abstract class Plant {
     protected abstract void needsWater();
     protected abstract void watering(int water);
 
-    public Plant(String color, String type, double waterAmount, boolean needsWater) {
+    public abstract String getType();
+
+    public Plant(String color) {
         this.color = color;
-        this.type = type;
-        this.waterAmount = waterAmount;
-        this.needsWater = needsWater;
+        this.waterAmount = 0;
+        this.needsWater = true;
     }
 }

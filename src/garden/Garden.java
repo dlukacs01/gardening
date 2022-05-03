@@ -30,7 +30,7 @@ public class Garden {
                     "The "
                     + plant.color
                     + " "
-                    + plant.type
+                    + plant.getType()
                     + " "
                     + (plant.needsWater ? "needs" : "doesnt need")
                     + " water"

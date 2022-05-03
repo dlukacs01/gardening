@@ -2,6 +2,10 @@ package garden;
 
 public class Flower extends Plant {
 
+    public String getType() {
+        return "flower";
+    }
+
     public void needsWater() {
         if(this.waterAmount < 5) {
             this.needsWater = true;
@@ -14,7 +18,7 @@ public class Flower extends Plant {
         this.waterAmount += 0.75 * water;
     }
 
-    public Flower(String color, String type, double waterAmount, boolean needsWater) {
-        super(color, type, waterAmount, needsWater);
+    public Flower(String color) {
+        super(color);
     }
 }
