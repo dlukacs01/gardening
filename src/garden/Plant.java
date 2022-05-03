@@ -5,8 +5,8 @@ abstract class Plant {
     /* FIELDS */
     protected String color;
     protected double waterAmount;
-    protected int amountToCheck;
-    protected double percentValue;
+    protected int amountToCheck; // abstract field
+    protected double percentValue; // abstract field
 
     /* GETTERS & SETTERS */
     public abstract String getType();

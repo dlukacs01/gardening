@@ -10,7 +10,7 @@ public class Garden {
     /* GETTERS & SETTERS */
     private int getWateringCount() {
         int i = 0;
-        for (Plant plant : plants) {
+        for (Plant plant : this.plants) {
             if(plant.needsWater()) {
                 i++;
             }
@@ -27,14 +27,14 @@ public class Garden {
     }
 
     public void water(int water) {
-        for (Plant plant : plants) {
+        for (Plant plant : this.plants) {
             plant.watering(water / this.getWateringCount());
         }
         this.print();
     }
 
     public void print() {
-        for (Plant plant : plants) {
+        for (Plant plant : this.plants) {
             System.out.println(plant.getStatus());
         }
         System.out.println(this.getWateringCount());
