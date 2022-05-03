@@ -3,10 +3,10 @@ package garden;
 public class Main {
     public static void main(String[] args) {
 
-        Plant yellow_flower = new Flower("yellow");
-        Plant blue_flower = new Flower("blue");
-        Plant purple_flower = new Tree("purple");
-        Plant orange_flower = new Tree("orange");
+        Flower yellow_flower = new Flower("yellow");
+        Flower blue_flower = new Flower("blue");
+        Tree purple_flower = new Tree("purple");
+        Tree orange_flower = new Tree("orange");
 
         Garden garden = new Garden();
 
