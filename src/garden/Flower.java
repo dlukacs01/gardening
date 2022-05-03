@@ -2,23 +2,15 @@ package garden;
 
 public class Flower extends Plant {
 
+    /* GETTERS & SETTER */
     public String getType() {
         return "flower";
     }
 
-    public void needsWater() {
-        if(this.waterAmount < 5) {
-            this.needsWater = true;
-        } else {
-            this.needsWater = false;
-        }
-    }
-
-    public void watering(int water) {
-        this.waterAmount += 0.75 * water;
-    }
-
+    /* CONSTRUCTOR */
     public Flower(String color) {
         super(color);
+        this.amountToCheck = 5;
+        this.percentValue = 0.75;
     }
 }

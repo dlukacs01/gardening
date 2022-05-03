@@ -2,23 +2,15 @@ package garden;
 
 public class Tree extends Plant {
 
+    /* GETTERS & SETTER */
     public String getType() {
         return "tree";
     }
 
-    public void needsWater() {
-        if(this.waterAmount < 5) {
-            this.needsWater = true;
-        } else {
-            this.needsWater = false;
-        }
-    }
-
-    public void watering(int water) {
-        this.waterAmount += 0.4 * water;
-    }
-
+    /* CONSTRUCTOR */
     public Tree(String color) {
         super(color);
+        this.amountToCheck = 10;
+        this.percentValue = 0.4;
     }
 }

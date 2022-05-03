@@ -10,12 +10,12 @@ public class Main {
 
         Garden garden = new Garden();
 
-        garden.plants.add(yellow_flower);
-        garden.plants.add(blue_flower);
-        garden.plants.add(purple_flower);
-        garden.plants.add(orange_flower);
+        garden.addPlant(yellow_flower);
+        garden.addPlant(blue_flower);
+        garden.addPlant(purple_flower);
+        garden.addPlant(orange_flower);
 
-        garden.printStatus();
+        garden.print();
         garden.water(40);
         garden.water(70);
     }

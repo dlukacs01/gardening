@@ -4,43 +4,40 @@ import java.util.ArrayList;
 
 public class Garden {
 
-    public ArrayList<Plant> plants;
-    private int wateringCount;
+    /* FIELDS */
+    private ArrayList<Plant> plants;
 
-    private void wateringCount() {
+    /* GETTERS & SETTER */
+    private int getWateringCount() {
+        int i = 0;
         for (Plant plant : plants) {
-            if(plant.needsWater) {
-                wateringCount++;
+            if(plant.needsWater()) {
+                i++;
             }
         }
+        return i;
+    }
+
+    /* CONSTRUCTOR */
+    public Garden() {this.plants = new ArrayList<>();}
+
+    /* CUSTOM */
+    public void addPlant(Plant plant) {
+        this.plants.add(plant);
     }
 
     public void water(int water) {
-        this.wateringCount();
         for (Plant plant : plants) {
-            plant.watering(water / wateringCount);
-            plant.needsWater();
+            plant.watering(water / this.getWateringCount());
         }
-        this.printStatus();
+        this.print();
     }
 
-    public void printStatus() {
+    public void print() {
         for (Plant plant : plants) {
-            System.out.println(
-                    "The "
-                    + plant.color
-                    + " "
-                    + plant.getType()
-                    + " "
-                    + (plant.needsWater ? "needs" : "doesnt need")
-                    + " water"
-            );
+            System.out.println(plant.getStatus());
         }
+        System.out.println(this.getWateringCount());
         System.out.println("------------------------------");
-    }
-
-    public Garden() {
-        this.wateringCount = 0;
-        this.plants = new ArrayList<>();
     }
 }
